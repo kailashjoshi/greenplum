@@ -8,12 +8,12 @@ Prerequisites for installation Greenplum Vagrant
 Installation of Greenplum
 --------------
 --------------
+Enter following commands in your terminal window
 
-1. mkdir greenplum
-2. cd greenplum
-3. git init
-4. git clone https://github.com/kailashjoshi/greenplum.git
-5. vagrant up
+1. git init
+2. git clone https://github.com/kailashjoshi/greenplum.git
+3. cd greenplum
+4. vagrant up
 
 Once the vagrant installtion process is completed, follow these steps from your terminal window
 
