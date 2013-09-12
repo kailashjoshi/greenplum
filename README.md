@@ -21,7 +21,7 @@ Once the vagrant installtion process is completed, follow these steps from your 
 2. su - gpadmin
 3. Enter the password. The password is "changeme"
 4. source /home/gpadmin/.bash_profile 
-5. gpinitsystem -c /home/gpadmin/gpinitsystem_config -h /home/gpadmin/hostfile_gpinitsystem -s smdw -S
+5. gpinitsystem -c /home/gpadmin/gpconfigs/gpinitsystem_config -h /home/gpadmin/gpconfigs/hostfile_gpinitsystem -s smdw -S
 
 Installation is completed!!
 
