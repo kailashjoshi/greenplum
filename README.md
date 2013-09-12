@@ -15,7 +15,7 @@ Installation of Greenplum
 4. git clone https://github.com/kailashjoshi/greenplum.git
 5. vagrant up
 
-Once the vagrant installtion process is completed, follow these steps
+Once the vagrant installtion process is completed, follow these steps from your terminal
 
 1. vagrant ssh mdw
 2. su - gpadmin
