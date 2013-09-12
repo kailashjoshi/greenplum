@@ -1,9 +1,4 @@
-Greenplum auto installation
------------
------------
-
-
-Prerequisites for installation
+Prerequisites for installation Greenplum Vagrant
 ------------------
 ------------------
 1. Install Vmbox from https://www.virtualbox.org/wiki/Downloads
