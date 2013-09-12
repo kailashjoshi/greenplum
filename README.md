@@ -28,7 +28,7 @@ Installation is completed!!
 Test the installation
 --------------
 --------------
-1. gpstate
+1. Run "gpstate" from your terminal window
 
 If you see no error when running gpstate, that means Greenplum has been sucessfully completed.
 
