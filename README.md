@@ -1,7 +1,7 @@
 Prerequisites for installation Greenplum Vagrant
 ------------------
 ------------------
-1. Install Vmbox from https://www.virtualbox.org/wiki/Downloads
+1. Install Virtualbox from https://www.virtualbox.org/wiki/Downloads
 2. Install latest version of Vagrant from http://downloads.vagrantup.com/
 
 
@@ -32,7 +32,24 @@ Test the installation
 
 If you see no error when running gpstate, that means Greenplum has been sucessfully completed.
 
-Thanks you!
+## Using a sample database ##
+
+You may also wish to experiment with a sample database. If you are **not** currently logged into the mdw machine as
+gpadmin, make sure to log in there first (same as above steps)
+
+> 1. vagrant ssh mdw
+> 2. su - gpadmin
+> 3. Enter the password. The password is "changeme"
+
+As user gpadmin on mdw...
+```
+$ createdb world
+$ psql -d world -a -f /var/local/world.sql
+$ psql world
+> select * from city limit 10; 
+```
+
+
 
 
 
