@@ -9,20 +9,20 @@ Installation of Greenplum
 --------------
 --------------
 Enter following commands in your terminal window
-
-1. git init
-2. git clone https://github.com/kailashjoshi/greenplum.git
-3. cd greenplum
-4. vagrant up
-
+```
+$ git init
+$ git clone https://github.com/kailashjoshi/greenplum.git
+$ cd greenplum
+$ vagrant up
+```
 Once the vagrant installtion process is completed, follow these steps from your terminal window
-
-1. vagrant ssh mdw
-2. su - gpadmin
-3. Enter the password. The password is "changeme"
-4. source /home/gpadmin/.bash_profile 
-5. gpinitsystem -c /home/gpadmin/gpconfigs/gpinitsystem_config -h /home/gpadmin/gpconfigs/hostfile_gpinitsystem -s smdw -S
-
+```
+$ vagrant ssh mdw
+$ su - gpadmin
+$ Enter the password. The password is "changeme"
+$ source /home/gpadmin/.bash_profile 
+$ gpinitsystem -c /home/gpadmin/gpconfigs/gpinitsystem_config -h /home/gpadmin/gpconfigs/hostfile_gpinitsystem -s smdw -S
+```
 Installation is completed!!
 
 Test the installation
