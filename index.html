@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Greenplum : Greenplum-Vegrant" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Greenplum</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kailashjoshi/greenplum">View on GitHub</a>
+
+          <h1 id="project_title">Greenplum</h1>
+          <h2 id="project_tagline">Greenplum-Vegrant</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kailashjoshi/greenplum/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kailashjoshi/greenplum/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="prerequisites-for-installation-greenplum-vagrant" class="anchor" href="#prerequisites-for-installation-greenplum-vagrant"><span class="octicon octicon-link"></span></a>Prerequisites for installation Greenplum Vagrant</h2>
+
+<hr><ol>
+<li>Install Virtualbox from <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>
+</li>
+<li>Install latest version of Vagrant from <a href="http://downloads.vagrantup.com/">http://downloads.vagrantup.com/</a>
+</li>
+</ol><h2>
+<a name="installation-of-greenplum" class="anchor" href="#installation-of-greenplum"><span class="octicon octicon-link"></span></a>Installation of Greenplum</h2>
+
+<hr><p>Enter following commands in your terminal window</p>
+
+<pre><code>$ git init
+$ git clone https://github.com/kailashjoshi/greenplum.git
+$ cd greenplum
+$ vagrant up
+</code></pre>
+
+<p>Once the vagrant installtion process is completed, follow these steps from your terminal window</p>
+
+<pre><code>$ vagrant ssh mdw
+$ su - gpadmin
+$ Enter the password. The password is "changeme"
+$ source /home/gpadmin/.bash_profile 
+$ gpinitsystem -c /home/gpadmin/gpconfigs/gpinitsystem_config -h /home/gpadmin/gpconfigs/hostfile_gpinitsystem -s smdw -S
+</code></pre>
+
+<p>Installation is completed!!</p>
+
+<h2>
+<a name="test-the-installation" class="anchor" href="#test-the-installation"><span class="octicon octicon-link"></span></a>Test the installation</h2>
+
+<hr><ol>
+<li>Run "gpstate" from your terminal window</li>
+</ol><p>If you see no error when running gpstate, that means Greenplum has been sucessfully completed.</p>
+
+<h2>
+<a name="using-a-sample-database" class="anchor" href="#using-a-sample-database"><span class="octicon octicon-link"></span></a>Using a sample database</h2>
+
+<p>You may also wish to experiment with a sample database. If you are <strong>not</strong> currently logged into the mdw machine as
+gpadmin, make sure to log in there first (same as above steps)</p>
+
+<blockquote>
+<ol>
+<li>vagrant ssh mdw</li>
+<li>su - gpadmin</li>
+<li>Enter the password. The password is "changeme"</li>
+</ol>
+</blockquote>
+
+<p>As user gpadmin on mdw...</p>
+
+<pre><code>$ createdb world
+$ psql -d world -a -f /var/local/world.sql
+$ psql world
+&gt; select * from city limit 10; 
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Greenplum maintained by <a href="https://github.com/kailashjoshi">kailashjoshi</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
