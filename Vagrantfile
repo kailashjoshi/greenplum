@@ -28,6 +28,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.define :mdw do |mdw_config|
     mdw_config.vm.network :private_network, ip: "192.168.2.11"
+    mdw_config.vm.network "forwarded_port", guest: 5432, host: 5433
     mdw_config.vm.hostname = "mdw"
 	mdw_config.vm.provision :shell, :path => "master.sh"
 	mdw_config.vm.provision :shell, :path => "gp.sh"
