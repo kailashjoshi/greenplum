@@ -10,7 +10,6 @@ Installation of Greenplum
 --------------
 Enter following commands in your terminal window
 ```
-$ git init
 $ git clone https://github.com/kailashjoshi/greenplum.git
 $ cd greenplum
 $ vagrant up
