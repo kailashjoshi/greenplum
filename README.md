@@ -1,7 +1,7 @@
 Prerequisites for installation Greenplum Vagrant
 ------------------
 ------------------
-1. Install Virtualbox from https://www.virtualbox.org/wiki/Downloads
+1. Install Virtualbox from https://www.virtualbox.org/wiki/Download_Old_Builds_5_0
 2. Install latest version of Vagrant from https://www.vagrantup.com/downloads.html
 
 
